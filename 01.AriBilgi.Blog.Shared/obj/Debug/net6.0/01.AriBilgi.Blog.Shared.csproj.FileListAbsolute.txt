@@ -1,0 +1,12 @@
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\bin\Debug\net6.0\01.AriBilgi.Blog.Shared.deps.json
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\bin\Debug\net6.0\01.AriBilgi.Blog.Shared.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\bin\Debug\net6.0\01.AriBilgi.Blog.Shared.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.AssemblyInfo.cs
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\refint\01.AriBilgi.Blog.Shared.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\01.AriBilgi.Blog.Shared.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\01.AriBilgi.Blog.Shared\obj\Debug\net6.0\ref\01.AriBilgi.Blog.Shared.dll

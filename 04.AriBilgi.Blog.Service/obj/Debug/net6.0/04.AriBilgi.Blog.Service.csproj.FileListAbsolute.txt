@@ -1,0 +1,12 @@
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\bin\Debug\net6.0\04.AriBilgi.Blog.Service.deps.json
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\bin\Debug\net6.0\04.AriBilgi.Blog.Service.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\bin\Debug\net6.0\04.AriBilgi.Blog.Service.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.AssemblyInfo.cs
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\refint\04.AriBilgi.Blog.Service.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\04.AriBilgi.Blog.Service.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\04.AriBilgi.Blog.Service\obj\Debug\net6.0\ref\04.AriBilgi.Blog.Service.dll

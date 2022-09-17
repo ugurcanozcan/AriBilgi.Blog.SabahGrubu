@@ -1,0 +1,15 @@
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\bin\Debug\net6.0\025.AriBilgi.Blog.Entities.deps.json
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\bin\Debug\net6.0\025.AriBilgi.Blog.Entities.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\bin\Debug\net6.0\025.AriBilgi.Blog.Entities.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\bin\Debug\net6.0\01.AriBilgi.Blog.Shared.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\bin\Debug\net6.0\01.AriBilgi.Blog.Shared.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.AssemblyInfo.cs
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.csproj.CopyComplete
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\refint\025.AriBilgi.Blog.Entities.dll
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\025.AriBilgi.Blog.Entities.pdb
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\025.AriBilgi.Blog.Entities\obj\Debug\net6.0\ref\025.AriBilgi.Blog.Entities.dll

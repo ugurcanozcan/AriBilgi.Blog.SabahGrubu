@@ -10,5 +10,6 @@ namespace _03.AriBilgi.Blog.Data.Repositories
 {
     public interface IUserRepository : IRepository<User>
     {
+        
     }
 }

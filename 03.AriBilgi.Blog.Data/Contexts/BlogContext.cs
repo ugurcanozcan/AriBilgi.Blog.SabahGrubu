@@ -1,5 +1,6 @@
 ﻿using _025.AriBilgi.Blog.Entities;
 using _03.AriBilgi.Blog.Data.Configurations;
+using _03.AriBilgi.Blog.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,22 @@ namespace _03.AriBilgi.Blog.Data.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            UnitOfWork unitOfWork = new UnitOfWork();
+
+            Article article = new Article();
+
+            unitOfWork.ArticleRepository.Add();
+
+
             optionsBuilder.UseSqlServer("Server=EGITMEN;Database=BlogDB;Trusted_Connection=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            UnitOfWork unitOfWork = new();
+
+            
+
             modelBuilder.ApplyConfiguration(new ArticleConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());

@@ -8,7 +8,10 @@ namespace _03.AriBilgi.Blog.Data.Repositories
     {
         public UserRepository(DbContext dbContext):base(dbContext)
         {
+         
 
         }
+
+       
     }
 }

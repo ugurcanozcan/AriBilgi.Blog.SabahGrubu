@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _025.AriBilgi.Blog.Entities
 {
-    public class Article : EntityBase
+    public class Article : EntityBase, IEntity
     {
         public string Title { get; set; }
         public string Content { get; set; }

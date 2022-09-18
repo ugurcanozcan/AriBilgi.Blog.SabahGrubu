@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _025.AriBilgi.Blog.Entities
 {
-    public class User:EntityBase
+    public class User : EntityBase, IEntity
     {
         public string Username { get; set; }
         public string Password { get; set; }

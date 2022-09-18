@@ -33,9 +33,6 @@ namespace _03.AriBilgi.Blog.Data.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -66,18 +63,11 @@ namespace _03.AriBilgi.Blog.Data.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("CategoryId1");
-
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Articles");
                 });
@@ -134,9 +124,6 @@ namespace _03.AriBilgi.Blog.Data.Migrations
                     b.Property<int>("ArticleId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ArticleId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -163,18 +150,11 @@ namespace _03.AriBilgi.Blog.Data.Migrations
                     b.Property<int?>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ArticleId");
 
-                    b.HasIndex("ArticleId1");
-
                     b.HasIndex("UserId");
-
-                    b.HasIndex("UserId1");
 
                     b.ToTable("Comments");
                 });
@@ -232,27 +212,15 @@ namespace _03.AriBilgi.Blog.Data.Migrations
 
             modelBuilder.Entity("_025.AriBilgi.Blog.Entities.Article", b =>
                 {
-                    b.HasOne("_025.AriBilgi.Blog.Entities.Category", null)
+                    b.HasOne("_025.AriBilgi.Blog.Entities.Category", "Category")
                         .WithMany("Articles")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("_025.AriBilgi.Blog.Entities.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("_025.AriBilgi.Blog.Entities.User", null)
+                    b.HasOne("_025.AriBilgi.Blog.Entities.User", "User")
                         .WithMany("Articles")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("_025.AriBilgi.Blog.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -263,27 +231,15 @@ namespace _03.AriBilgi.Blog.Data.Migrations
 
             modelBuilder.Entity("_025.AriBilgi.Blog.Entities.Comment", b =>
                 {
-                    b.HasOne("_025.AriBilgi.Blog.Entities.Article", null)
+                    b.HasOne("_025.AriBilgi.Blog.Entities.Article", "Article")
                         .WithMany("Comments")
                         .HasForeignKey("ArticleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("_025.AriBilgi.Blog.Entities.Article", "Article")
-                        .WithMany()
-                        .HasForeignKey("ArticleId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("_025.AriBilgi.Blog.Entities.User", null)
+                    b.HasOne("_025.AriBilgi.Blog.Entities.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId");
-
-                    b.HasOne("_025.AriBilgi.Blog.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("Article");
 

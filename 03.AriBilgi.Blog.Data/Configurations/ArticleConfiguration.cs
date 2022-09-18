@@ -1,4 +1,5 @@
-﻿using _025.AriBilgi.Blog.Entities;
+﻿using _01.AriBilgi.Blog.Shared;
+using _025.AriBilgi.Blog.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

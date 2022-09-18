@@ -786,6 +786,9 @@
       "01.AriBilgi.Blog.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.9"
+        },
         "compile": {
           "bin/placeholder/01.AriBilgi.Blog.Shared.dll": {}
         },

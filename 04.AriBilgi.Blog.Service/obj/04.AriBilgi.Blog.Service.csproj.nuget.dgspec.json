@@ -4,14 +4,14 @@
     "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj": {
+    "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj",
-        "projectName": "04.AriBilgi.Blog.Service",
-        "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj",
+        "projectName": "01.AriBilgi.Blog.Shared",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\obj\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +61,271 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\02.AriBilgi.Blog.Model\\02.AriBilgi.Blog.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\02.AriBilgi.Blog.Model\\02.AriBilgi.Blog.Model.csproj",
+        "projectName": "02.AriBilgi.Blog.Model",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\02.AriBilgi.Blog.Model\\02.AriBilgi.Blog.Model.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\02.AriBilgi.Blog.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj",
+        "projectName": "025.AriBilgi.Blog.Entities",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\03.AriBilgi.Blog.Data\\03.AriBilgi.Blog.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\03.AriBilgi.Blog.Data\\03.AriBilgi.Blog.Data.csproj",
+        "projectName": "03.AriBilgi.Blog.Data",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\03.AriBilgi.Blog.Data\\03.AriBilgi.Blog.Data.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\03.AriBilgi.Blog.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\025.AriBilgi.Blog.Entities\\025.AriBilgi.Blog.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj",
+        "projectName": "04.AriBilgi.Blog.Service",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\04.AriBilgi.Blog.Service.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\04.AriBilgi.Blog.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\01.AriBilgi.Blog.Shared\\01.AriBilgi.Blog.Shared.csproj"
+              },
+              "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\02.AriBilgi.Blog.Model\\02.AriBilgi.Blog.Model.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\02.AriBilgi.Blog.Model\\02.AriBilgi.Blog.Model.csproj"
+              },
+              "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\03.AriBilgi.Blog.Data\\03.AriBilgi.Blog.Data.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\03.AriBilgi.Blog.Data\\03.AriBilgi.Blog.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

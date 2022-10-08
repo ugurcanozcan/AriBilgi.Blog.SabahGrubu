@@ -39,6 +39,7 @@ namespace _01.AriBilgi.Blog.Shared
 
         public T Get(Func<T, bool> predicate)
         {
+            
             return _dbContext.Set<T>().Where(predicate).First();
         }
 

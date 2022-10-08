@@ -10,6 +10,6 @@ namespace _03.AriBilgi.Blog.Data.Repositories
 {
     public interface IArticleRepository : IRepository<Article>
     {
-       
+      
     }
 }

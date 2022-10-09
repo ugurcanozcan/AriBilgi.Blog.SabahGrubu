@@ -1,8 +1,13 @@
+using _03.AriBilgi.Blog.Data.Repositories;
+using _04.AriBilgi.Blog.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IArticleService, ArticleManager>();
 
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
@@ -19,9 +24,20 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-
-
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapAreaControllerRoute(
+        name: "Admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
+        );
+
+    endpoints.MapDefaultControllerRoute();
+});
+
+
 
 app.MapRazorPages();
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tA4jjqiJ4XY7D5pLJmSXjB7ld8xOD+nLQa105eg7Mpo=",
+  "Hash": "DQxxamh0RoRfSkIPqNV69c8jtqO917Cs/+10XjsyX84=",
   "Source": "05.AriBilgi.Blog.Web",
   "BasePath": "_content/05.AriBilgi.Blog.Web",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\05.AriBilgi.Blog.Web.styles.css",
-      "SourceId": "05.AriBilgi.Blog.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/05.AriBilgi.Blog.Web",
-      "RelativePath": "05.AriBilgi.Blog.Web.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\05.AriBilgi.Blog.Web.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\05.AriBilgi.Blog.Web.bundle.scp.css",
-      "SourceId": "05.AriBilgi.Blog.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/05.AriBilgi.Blog.Web",
-      "RelativePath": "05.AriBilgi.Blog.Web.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\05.AriBilgi.Blog.Web.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.Web\\wwwroot\\css\\site.css",
       "SourceId": "05.AriBilgi.Blog.Web",

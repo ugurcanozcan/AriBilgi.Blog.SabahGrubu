@@ -7,4 +7,13 @@
     <RootNamespace>_05.AriBilgi.Blog.Web</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\04.AriBilgi.Blog.Service\04.AriBilgi.Blog.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

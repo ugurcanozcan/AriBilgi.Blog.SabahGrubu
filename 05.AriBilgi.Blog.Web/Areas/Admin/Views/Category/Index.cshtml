@@ -1,0 +1,53 @@
+﻿@using _02.AriBilgi.Blog.Model.CategoryDtos
+@model List<CategoryDto>
+@{
+    Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1 class="mt-4">Kategoriler</h1>
+
+
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item">Yönetim Paneli</li>
+    <li class="breadcrumb-item active">Kategoriler</li>
+</ol>
+
+
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+        Mevcut Kategorilerin Tablosu
+        <div class="float-right">
+            <a href="#" class="btn-sm btn-primary">Yeni Ekle</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="tblCategory" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Adı</th>
+                        <th>Açıklama</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @{
+                        foreach (CategoryDto item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.Description</td>
+                                <td></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

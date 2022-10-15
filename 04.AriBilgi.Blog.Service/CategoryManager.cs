@@ -35,7 +35,7 @@ namespace _04.AriBilgi.Blog.Service
             }
         }
 
-        public IResult GetAll()
+        public DataResult<List<CategoryDto>> GetAll()
         {
             try
             {
@@ -45,7 +45,7 @@ namespace _04.AriBilgi.Blog.Service
             catch (Exception ex)
             {
                 //TODO : LOGLAMA YAPILACAK
-                return new Result(ResultStatus.Error, "Sistem hatası.", ex);
+                return new DataResult<List<CategoryDto>>(new List<CategoryDto>(), ResultStatus.Error);
             }
         }
 

@@ -5,7 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
-builder.Services.AddScoped<IArticleService, ArticleManager>();
+
+
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 builder.Services.AddControllersWithViews();
 

@@ -1,4 +1,5 @@
 ﻿using _01.AriBilgi.Blog.Shared;
+using _02.AriBilgi.Blog.Model.CategoryDtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace _04.AriBilgi.Blog.Service
     public interface ICategoryService
     {
         IResult Get(int categoryId);
-        IResult GetAll();
+        DataResult<List<CategoryDto>> GetAll();
         IResult GetAllNonDeleted();
     }
 }

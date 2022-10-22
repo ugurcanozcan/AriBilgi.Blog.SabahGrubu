@@ -12,5 +12,6 @@ namespace _03.AriBilgi.Blog.Data.Repositories
         IUserRepository UserRepository { get; }
         ICommentRepository CommentRepository { get; }
         ICategoryRepository CategoryRepository { get; }
+        void SaveChanges();
     }
 }

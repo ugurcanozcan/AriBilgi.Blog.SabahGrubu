@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace _04.AriBilgi.Blog.Service
 {
-    public class ArticleManager : IArticleService
+    public class ArticleManager
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -22,92 +22,103 @@ namespace _04.AriBilgi.Blog.Service
             _unitOfWork = new UnitOfWork();
         }
 
-        public IResult Get(int articleId)
+        public ArticleDto Get(int articleId)
+        {
+            Article article = _unitOfWork.ArticleRepository.Get(a => a.Id == articleId);
+
+            ArticleDto articleDto = article.ToDto();
+
+            articleDto.User = _unitOfWork.UserRepository.Get(u => u.Id == article.UserId).ToDto();
+            articleDto.Category = _unitOfWork.CategoryRepository.Get(c => c.Id == article.CategoryId).ToDto();
+            articleDto.Comments = _unitOfWork.CommentRepository.GetAll(c => c.ArticleId == article.Id).ToDto().ToList();
+
+            return articleDto;
+        }
+
+        public List<ArticleDto> GetAll()
+        {
+
+            List<ArticleDto> articleDtos = (from a in _unitOfWork.ArticleRepository.GetAll()
+                                            join c in _unitOfWork.CategoryRepository.GetAll() on a.CategoryId equals c.Id
+                                            join u in _unitOfWork.UserRepository.GetAll() on a.UserId equals u.Id
+                                            select new ArticleDto
+                                            {
+                                                Id = a.Id,
+                                                Content = a.Content,
+                                                IsDeleted = a.IsDeleted,
+                                                Title = a.Title,
+                                                Category = c.ToDto(),
+                                                User = u.ToDto()
+                                            }).ToList();
+            return articleDtos;
+
+        }
+
+        public List<ArticleDto> GetAll(int categoryId)
+        {
+            List<ArticleDto> articleDtos = GetAll();
+            articleDtos = articleDtos.Where(a => a.Category.Id == categoryId).ToList();
+            return articleDtos;
+        }
+
+        public List<ArticleDto> GetAllNonDeleted()
+        {
+            List<ArticleDto> articleDtos = GetAll();
+            articleDtos = articleDtos.Where(a => !a.IsDeleted).ToList();
+            return articleDtos;
+        }
+
+        public void Add(AddArticleDto addArticleDto)
         {
             try
             {
+                _unitOfWork.ArticleRepository.Add(addArticleDto.ToEntity());
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
+        public void Update(UpdateArticleDto updateArticleDto, int articleId)
+        {
+            try
+            {
                 Article article = _unitOfWork.ArticleRepository.Get(a => a.Id == articleId);
 
-                ArticleDto articleDto = article.ToDto();
+                article.Title = updateArticleDto.Title;
+                article.Content = updateArticleDto.Content;
+                article.CategoryId = updateArticleDto.CategoryId;
+                article.ModifedDate = DateTime.Now;
+                article.ModifedBy = "Uğurcan Özcan";
 
-                articleDto.User = _unitOfWork.UserRepository.Get(u => u.Id == article.UserId).ToDto();
-                articleDto.Category = _unitOfWork.CategoryRepository.Get(c => c.Id == article.CategoryId).ToDto();
-                articleDto.Comments = _unitOfWork.CommentRepository.GetAll(c => c.ArticleId == article.Id).ToDto().ToList();
-
-                if (articleDto != null)
-                {
-                    return new DataResult<ArticleDto>(articleDto, ResultStatus.Success);
-                }
-
-                return new Result(ResultStatus.Success, "Aradığınız id'ye ait bir makale bulunumadı");
+                _unitOfWork.ArticleRepository.Update(article);
+                _unitOfWork.SaveChanges();
             }
             catch (Exception ex)
             {
-                // TODO: LOGLAMA YAPILACAK
-                return new Result(ResultStatus.Error, "Makale getirilemedi. Sistem hatayla karşılaştı.", ex);
+                throw new Exception(ex.Message);
             }
         }
 
-        
-        public IResult GetAll()
+        public void Delete(int articleId)
         {
             try
             {
-                List<ArticleDto> articleDtos = (from a in _unitOfWork.ArticleRepository.GetAll()
-                                               join c in _unitOfWork.CategoryRepository.GetAll() on a.CategoryId equals c.Id 
-                                               join u in _unitOfWork.UserRepository.GetAll() on a.UserId equals u.Id
-                                                select new ArticleDto
-                                               {
-                                                   Id=a.Id,
-                                                   Content=a.Content,
-                                                   Title=a.Title,
-                                                   Category=c.ToDto(),
-                                                   User=u.ToDto()
-                                               }).ToList();
+                Article article = _unitOfWork.ArticleRepository.Get(a => a.Id == articleId);
+                article.IsDeleted = true;
+                article.DeletedDate = DateTime.Now;
+                article.DeletedBy = "Yağız Yenikurtuluş";
+                _unitOfWork.ArticleRepository.Update(article);
+                _unitOfWork.SaveChanges();
 
-
-             
-
-
-
-
-                return new DataResult<List<ArticleDto>>(articleDtos, ResultStatus.Success);
             }
             catch (Exception ex)
             {
-                //TODO: LOGLAMA YAPILACAK
-                return new Result(ResultStatus.Error, "Sistemsel bir hata oluştu.", ex);
-            }
-
-        }
-
-        public IResult GetAllByCategoryId(int categoryId)
-        {
-            try
-            {
-                List<ArticleDto> articleDtos = _unitOfWork.ArticleRepository.GetAll(a => a.CategoryId == categoryId).ToDto().ToList();
-                return new DataResult<List<ArticleDto>>(articleDtos, ResultStatus.Success);
-            }
-            catch (Exception ex)
-            {
-                //TODO: LOGLAMA YAPILACAK
-                return new Result(ResultStatus.Error, "Sistemsel bir hata oluştu.", ex);
+                throw new Exception(ex.Message);
             }
         }
 
-        public IResult GetAllNonDeleted()
-        {
-            try
-            {
-                List<ArticleDto> articleDtos = _unitOfWork.ArticleRepository.GetAll(a => !a.IsDeleted).ToDto().ToList();
-                return new DataResult<List<ArticleDto>>(articleDtos, ResultStatus.Success);
-            }
-            catch (Exception ex)
-            {
-                //TODO: LOGLAMA YAPILACAK
-                return new Result(ResultStatus.Error, "Sistemsel bir hata oluştu.", ex);
-            }
-        }
     }
 }

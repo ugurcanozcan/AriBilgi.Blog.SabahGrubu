@@ -25,5 +25,10 @@ namespace _03.AriBilgi.Blog.Data.Repositories
         public IUserRepository UserRepository => _userRepository ?? new UserRepository(_blogContext);
         public ICommentRepository CommentRepository => _commentRepository ?? new CommentRepository(_blogContext);
         public ICategoryRepository CategoryRepository => _categoryRepository ?? new CategoryRepository(_blogContext);
+
+        public void SaveChanges()
+        {
+            _blogContext.SaveChanges();
+        }
     }
 }

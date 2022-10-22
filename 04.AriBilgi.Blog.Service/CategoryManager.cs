@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace _04.AriBilgi.Blog.Service
 {
-    public class CategoryManager : ICategoryService
+    public class CategoryManager
     {
         private readonly IUnitOfWork _unitOfWork;
 

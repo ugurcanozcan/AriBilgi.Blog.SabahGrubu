@@ -17,11 +17,15 @@ namespace _04.AriBilgi.Blog.Service.Mapping
     {
         public static ArticleDto ToDto(this Article article)
         {
-            return new ArticleDto { Id = article.Id, Title = article.Title, Content = article.Content };
+            return new ArticleDto { Id = article.Id, Title = article.Title, Content = article.Content, IsDeleted=article.IsDeleted };
         }
         public static IEnumerable<ArticleDto> ToDto(this IEnumerable<Article> articles)
         {
             return articles.Select(a => a.ToDto());
+        }
+        public static Article ToEntity(this AddArticleDto addArticleDto)
+        {
+            return new Article { Title = addArticleDto.Title, Content = addArticleDto.Content, CategoryId = addArticleDto.CategoryId, IsDeleted = false, UserId=1, CreatedDate=DateTime.Now };
         }
 
 

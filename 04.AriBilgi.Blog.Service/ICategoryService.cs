@@ -13,5 +13,6 @@ namespace _04.AriBilgi.Blog.Service
         IResult Get(int categoryId);
         DataResult<List<CategoryDto>> GetAll();
         IResult GetAllNonDeleted();
+       
     }
 }

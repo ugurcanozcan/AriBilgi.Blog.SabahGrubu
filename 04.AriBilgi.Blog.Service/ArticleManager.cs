@@ -1,6 +1,7 @@
 ﻿using _01.AriBilgi.Blog.Shared;
 
 using _02.AriBilgi.Blog.Model.ArticleDtos;
+using _02.AriBilgi.Blog.Model.CommentDtos;
 using _025.AriBilgi.Blog.Entities;
 using _03.AriBilgi.Blog.Data.Repositories;
 using _04.AriBilgi.Blog.Service.Mapping;
@@ -48,11 +49,29 @@ namespace _04.AriBilgi.Blog.Service
             }
         }
 
+        
         public IResult GetAll()
         {
             try
             {
-                List<ArticleDto> articleDtos = _unitOfWork.ArticleRepository.GetAll().ToDto().ToList();
+                List<ArticleDto> articleDtos = (from a in _unitOfWork.ArticleRepository.GetAll()
+                                               join c in _unitOfWork.CategoryRepository.GetAll() on a.CategoryId equals c.Id 
+                                               join u in _unitOfWork.UserRepository.GetAll() on a.UserId equals u.Id
+                                                select new ArticleDto
+                                               {
+                                                   Id=a.Id,
+                                                   Content=a.Content,
+                                                   Title=a.Title,
+                                                   Category=c.ToDto(),
+                                                   User=u.ToDto()
+                                               }).ToList();
+
+
+             
+
+
+
+
                 return new DataResult<List<ArticleDto>>(articleDtos, ResultStatus.Success);
             }
             catch (Exception ex)

@@ -13,7 +13,7 @@ namespace _03.AriBilgi.Blog.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.Property(c=>c.Name).IsRequired();
+            builder.Property(c => c.Name).IsRequired();
             builder.Property(c => c.Name).HasMaxLength(20);
 
             builder.Property(c => c.Description).HasMaxLength(255);

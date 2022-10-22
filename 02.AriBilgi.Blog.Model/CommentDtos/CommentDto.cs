@@ -1,4 +1,5 @@
-﻿using _02.AriBilgi.Blog.Model.UserDtos;
+﻿using _02.AriBilgi.Blog.Model.ArticleDtos;
+using _02.AriBilgi.Blog.Model.UserDtos;
 using _025.AriBilgi.Blog.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,5 +14,6 @@ namespace _02.AriBilgi.Blog.Model.CommentDtos
         public int Id { get; set; }
         public string Content { get; set; }
         public UserDto User { get; set; }
+        public ArticleDto Article { get; set; }
     }
 }

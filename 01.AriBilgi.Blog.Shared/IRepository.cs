@@ -12,9 +12,10 @@ namespace _01.AriBilgi.Blog.Shared
         void Delete(T entity);
         void Update(T entity);
         T Get(Func<T, bool> predicate);
-        List<T> GetAll();
+        IQueryable<T> GetAll();
         List<T> GetAll(Func<T, bool> predicate);
         bool Any(Func<T, bool> predicate);
         int Count(Func<T, bool> predicate);
+       
     }
 }

@@ -8,6 +8,7 @@ builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<IArticleService, ArticleManager>();
 
 builder.Services.AddControllersWithViews();
 

@@ -13,9 +13,7 @@ namespace _03.AriBilgi.Blog.Data.Repositories
     {
         public ArticleRepository(DbContext dbContext):base(dbContext)
         {
-
+            
         }
-
-     
     }
 }

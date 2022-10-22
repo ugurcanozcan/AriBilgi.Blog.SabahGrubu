@@ -20,6 +20,8 @@ namespace _04.AriBilgi.Blog.Service
             _unitOfWork = new UnitOfWork();
         }
 
+       
+
         public IResult Get(int categoryId)
         {
             try

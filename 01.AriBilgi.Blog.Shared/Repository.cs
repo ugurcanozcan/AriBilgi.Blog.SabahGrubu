@@ -43,15 +43,19 @@ namespace _01.AriBilgi.Blog.Shared
             return _dbContext.Set<T>().Where(predicate).First();
         }
 
-        public List<T> GetAll()
+        public IQueryable<T> GetAll()
         {
-            return _dbContext.Set<T>().ToList();
+            return _dbContext.Set<T>().AsQueryable();
         }
 
         public List<T> GetAll(Func<T, bool> predicate)
         {
             return _dbContext.Set<T>().Where(predicate).ToList();
+
+
         }
+
+        
 
         public void Update(T entity)
         {

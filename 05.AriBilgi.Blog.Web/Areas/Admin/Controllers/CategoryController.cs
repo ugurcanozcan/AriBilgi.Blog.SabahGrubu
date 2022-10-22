@@ -13,8 +13,9 @@ namespace _05.AriBilgi.Blog.Web.Areas.Admin.Controllers
         public CategoryController(ICategoryService categoryService)
         {
             _categoryService = categoryService;
-        }
 
+        }
+      
         public IActionResult Index()
         {
             return View(_categoryService.GetAll().Data);

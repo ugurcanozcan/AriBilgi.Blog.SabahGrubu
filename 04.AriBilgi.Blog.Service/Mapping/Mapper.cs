@@ -61,6 +61,10 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         {
             return comments.Select(x => x.ToDto());
         }
+        public static Comment ToEntity(this AddCommentDto addCommentDto)
+        {
+            return new Comment { Content=addCommentDto.Content, CreatedDate=DateTime.Now, UserId=1, IsDeleted=false, ArticleId=addCommentDto.ArticleId };
+        }
         #endregion
     }
 }

@@ -13,7 +13,8 @@ namespace _02.AriBilgi.Blog.Model.CommentDtos
     {
         public int Id { get; set; }
         public string Content { get; set; }
+        public bool IsDeleted { get; set; }
+        public DateTime CreatedDate { get; set; }
         public UserDto User { get; set; }
-        public ArticleDto Article { get; set; }
     }
 }

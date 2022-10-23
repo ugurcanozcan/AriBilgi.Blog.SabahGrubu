@@ -1,6 +1,7 @@
 ﻿using _01.AriBilgi.Blog.Shared;
 
 using _02.AriBilgi.Blog.Model.ArticleDtos;
+using _02.AriBilgi.Blog.Model.CategoryDtos;
 using _02.AriBilgi.Blog.Model.CommentDtos;
 using _025.AriBilgi.Blog.Entities;
 using _03.AriBilgi.Blog.Data.Repositories;
@@ -21,6 +22,7 @@ namespace _04.AriBilgi.Blog.Service
         {
             _unitOfWork = new UnitOfWork();
         }
+
 
         public ArticleDto Get(int articleId)
         {

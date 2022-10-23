@@ -20,48 +20,71 @@ namespace _04.AriBilgi.Blog.Service
             _unitOfWork = new UnitOfWork();
         }
 
-       
 
-        public IResult Get(int categoryId)
+
+        public CategoryDto Get(int categoryId)
+        {
+            CategoryDto categoryDto = _unitOfWork.CategoryRepository.Get(c => c.Id == categoryId).ToDto();
+            return categoryDto;
+        }
+
+        public List<CategoryDto> GetAll()
+        {
+            List<CategoryDto> categoryDtos = _unitOfWork.CategoryRepository.GetAll().ToDto().ToList();
+            return categoryDtos;
+        }
+
+        public List<CategoryDto> GetAllNonDeleted()
+        {
+            List<CategoryDto> categoryDtos = _unitOfWork.CategoryRepository.GetAll(c => !c.IsDeleted).ToDto().ToList();
+            return categoryDtos;
+        }
+
+        public void Add(AddCategoryDto addCategoryDto)
         {
             try
             {
-                CategoryDto categoryDto = _unitOfWork.CategoryRepository.Get(c => c.Id == categoryId).ToDto();
-
-                return new DataResult<CategoryDto>(categoryDto, ResultStatus.Success);
+                _unitOfWork.CategoryRepository.Add(addCategoryDto.ToEntity());
+                _unitOfWork.SaveChanges();
             }
             catch (Exception ex)
             {
-                //TODO : LOGLAMA YAPILACAK
-                return new Result(ResultStatus.Error, "Sistem hatası.", ex);
+                throw new Exception(ex.Message);
             }
         }
 
-        public DataResult<List<CategoryDto>> GetAll()
+        public void Update(UpdateCategoryDto updateCategoryDto, int categoryId)
         {
             try
             {
-                List<CategoryDto> categoryDtos = _unitOfWork.CategoryRepository.GetAll().ToDto().ToList();
-                return new DataResult<List<CategoryDto>>(categoryDtos, ResultStatus.Success);
+                Category category = _unitOfWork.CategoryRepository.Get(c => c.Id == categoryId);
+                category.Name = updateCategoryDto.Name;
+                category.Description = updateCategoryDto.Description;
+                category.ModifedBy = "Uğurcan Özcan";
+                category.ModifedDate = DateTime.Now;
+                _unitOfWork.CategoryRepository.Update(category);
+                _unitOfWork.SaveChanges();
             }
             catch (Exception ex)
             {
-                //TODO : LOGLAMA YAPILACAK
-                return new DataResult<List<CategoryDto>>(new List<CategoryDto>(), ResultStatus.Error);
+                throw new Exception(ex.Message);
             }
         }
 
-        public IResult GetAllNonDeleted()
+        public void Delete(int categoryId)
         {
             try
             {
-                List<CategoryDto> categoryDtos = _unitOfWork.CategoryRepository.GetAll(c => !c.IsDeleted).ToDto().ToList();
-                return new DataResult<List<CategoryDto>>(categoryDtos, ResultStatus.Success);
+                Category category = _unitOfWork.CategoryRepository.Get(c => c.Id == categoryId);
+                category.IsDeleted = true;
+                category.DeletedDate = DateTime.Now;
+                category.DeletedBy = "Yağız Yenikurtuluş";
+                _unitOfWork.CategoryRepository.Update(category);
+                _unitOfWork.SaveChanges();
             }
             catch (Exception ex)
             {
-
-                return new Result(ResultStatus.Error, "Sistem hatası.", ex);
+                throw new Exception(ex.Message);
             }
         }
     }

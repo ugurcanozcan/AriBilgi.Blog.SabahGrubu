@@ -15,6 +15,7 @@ namespace _04.AriBilgi.Blog.Service.Mapping
 {
     public static class Mapper
     {
+        #region ArticleDtos
         public static ArticleDto ToDto(this Article article)
         {
             return new ArticleDto { Id = article.Id, Title = article.Title, Content = article.Content, IsDeleted=article.IsDeleted };
@@ -27,13 +28,16 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         {
             return new Article { Title = addArticleDto.Title, Content = addArticleDto.Content, CategoryId = addArticleDto.CategoryId, IsDeleted = false, UserId=1, CreatedDate=DateTime.Now };
         }
+        #endregion
 
-
+        #region UserDtos
         public static UserDto ToDto(this User user)
         {
             return new UserDto { Id = user.Id, Name = user.Name, Surname = user.Surname, Username = user.Username };
         }
+        #endregion
 
+        #region CategoryDto
         public static CategoryDto ToDto(this Category category)
         {
             return new CategoryDto { Id = category.Id, Name = category.Name, Description = category.Description };
@@ -42,16 +46,21 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         {
             return categories.Select(c => c.ToDto());
         }
-      
+        public static Category ToEntity(this AddCategoryDto addCategoryDto)
+        {
+            return new Category { Name = addCategoryDto.Name, Description = addCategoryDto.Description, CreatedDate = DateTime.Now, IsDeleted = false };
+        }
+        #endregion
 
+        #region CommentDtos
         public static CommentDto ToDto(this Comment comment)
         {
             return new CommentDto { Id = comment.Id, Content = comment.Content, User = comment.User.ToDto() };
         }
-
         public static IEnumerable<CommentDto> ToDto(this IEnumerable<Comment> comments)
         {
             return comments.Select(x => x.ToDto());
         }
+        #endregion
     }
 }

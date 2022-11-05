@@ -60,10 +60,14 @@ namespace _05.AriBilgi.Blog.API.Controllers
         {
             CategoryManager categoryManager = new();
             categoryManager.Delete(categoryId);
+        }
 
-          
-          
-
+        [HttpPut]
+        [Route("SetActive")]
+        public void SetActive(int categoryId)
+        {
+            CategoryManager categoryManager = new();
+            categoryManager.SetActive(categoryId);
         }
 
 

@@ -16,6 +16,7 @@ namespace _02.AriBilgi.Blog.Model.ArticleDtos
         public string Title { get; set; }
         public string Content { get; set; }
         public bool IsDeleted { get; set; }
+        public string State { get; set; }
         public UserDto User { get; set; }
         public CategoryDto Category { get; set; }
         public List<CommentDto> Comments { get; set; }

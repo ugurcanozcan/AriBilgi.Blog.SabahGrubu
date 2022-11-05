@@ -18,7 +18,7 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         #region ArticleDtos
         public static ArticleDto ToDto(this Article article)
         {
-            return new ArticleDto { Id = article.Id, Title = article.Title, Content = article.Content, IsDeleted=article.IsDeleted };
+            return new ArticleDto { Id = article.Id, Title = article.Title, Content = article.Content, IsDeleted = article.IsDeleted };
         }
         public static IEnumerable<ArticleDto> ToDto(this IEnumerable<Article> articles)
         {
@@ -26,7 +26,7 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         }
         public static Article ToEntity(this AddArticleDto addArticleDto)
         {
-            return new Article { Title = addArticleDto.Title, Content = addArticleDto.Content, CategoryId = addArticleDto.CategoryId, IsDeleted = false, UserId=1, CreatedDate=DateTime.Now };
+            return new Article { Title = addArticleDto.Title, Content = addArticleDto.Content, CategoryId = addArticleDto.CategoryId, IsDeleted = false, UserId = 1, CreatedDate = DateTime.Now };
         }
         #endregion
 
@@ -40,7 +40,13 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         #region CategoryDto
         public static CategoryDto ToDto(this Category category)
         {
-            return new CategoryDto { Id = category.Id, Name = category.Name, Description = category.Description };
+            return new CategoryDto
+            {
+                Id = category.Id,
+                Name = category.Name,
+                Description = category.Description,
+                State = category.IsDeleted ? "Silindi" : "Aktif"
+            };
         }
         public static IEnumerable<CategoryDto> ToDto(this IEnumerable<Category> categories)
         {
@@ -63,7 +69,7 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         }
         public static Comment ToEntity(this AddCommentDto addCommentDto)
         {
-            return new Comment { Content=addCommentDto.Content, CreatedDate=DateTime.Now, UserId=1, IsDeleted=false, ArticleId=addCommentDto.ArticleId };
+            return new Comment { Content = addCommentDto.Content, CreatedDate = DateTime.Now, UserId = 1, IsDeleted = false, ArticleId = addCommentDto.ArticleId };
         }
         #endregion
     }

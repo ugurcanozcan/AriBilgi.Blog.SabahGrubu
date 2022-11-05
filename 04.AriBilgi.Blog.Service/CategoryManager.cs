@@ -21,7 +21,6 @@ namespace _04.AriBilgi.Blog.Service
         }
 
 
-
         public CategoryDto Get(int categoryId)
         {
             CategoryDto categoryDto = _unitOfWork.CategoryRepository.Get(c => c.Id == categoryId).ToDto();
@@ -79,6 +78,23 @@ namespace _04.AriBilgi.Blog.Service
                 category.IsDeleted = true;
                 category.DeletedDate = DateTime.Now;
                 category.DeletedBy = "Yağız Yenikurtuluş";
+                _unitOfWork.CategoryRepository.Update(category);
+                _unitOfWork.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public void SetActive(int categoryId)
+        {
+            try
+            {
+                Category category = _unitOfWork.CategoryRepository.Get(c => c.Id == categoryId);
+                category.IsDeleted = false;
+                category.ModifedBy = "Uğurcan Özcan";
+                category.ModifedDate = DateTime.Now;
+
                 _unitOfWork.CategoryRepository.Update(category);
                 _unitOfWork.SaveChanges();
             }

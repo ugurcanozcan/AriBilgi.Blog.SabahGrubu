@@ -11,6 +11,6 @@ namespace _02.AriBilgi.Blog.Model.CategoryDtos
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Description2 { get; set; }
+        public string State { get; set; }
     }
 }

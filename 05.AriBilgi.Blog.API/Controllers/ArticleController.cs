@@ -57,6 +57,14 @@ namespace _05.AriBilgi.Blog.API.Controllers
             return articleManager.GetAllNonDeleted();
         }
 
+        [HttpPut]
+        [Route("SetActive")]
+        public void SetActive(int articleId)
+        {
+            ArticleManager articleManager = new();
+            articleManager.SetActive(articleId);
+        }
+
         
     }
 }

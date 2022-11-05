@@ -49,6 +49,7 @@ namespace _04.AriBilgi.Blog.Service
                                                 Content = a.Content,
                                                 IsDeleted = a.IsDeleted,
                                                 Title = a.Title,
+                                                State = a.IsDeleted ? "Silindi" : "Aktif",
                                                 Category = c.ToDto(),
                                                 User = u.ToDto()
                                             }).ToList();
@@ -115,6 +116,23 @@ namespace _04.AriBilgi.Blog.Service
                 _unitOfWork.ArticleRepository.Update(article);
                 _unitOfWork.SaveChanges();
 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public void SetActive(int articleId)
+        {
+            try
+            {
+                Article article = _unitOfWork.ArticleRepository.Get(a => a.Id == articleId);
+                article.IsDeleted = false;
+                article.ModifedBy = "Uğurcan Özcan";
+                article.ModifedDate = DateTime.Now;
+
+                _unitOfWork.ArticleRepository.Update(article);
+                _unitOfWork.SaveChanges();
             }
             catch (Exception ex)
             {

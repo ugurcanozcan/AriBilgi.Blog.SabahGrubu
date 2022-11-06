@@ -50,6 +50,7 @@ namespace _04.AriBilgi.Blog.Service
                                                 IsDeleted = a.IsDeleted,
                                                 Title = a.Title,
                                                 State = a.IsDeleted ? "Silindi" : "Aktif",
+                                                CreatedDate = a.CreatedDate,
                                                 Category = c.ToDto(),
                                                 User = u.ToDto()
                                             }).ToList();
@@ -60,7 +61,7 @@ namespace _04.AriBilgi.Blog.Service
         public List<ArticleDto> GetAll(int categoryId)
         {
             List<ArticleDto> articleDtos = GetAll();
-            articleDtos = articleDtos.Where(a => a.Category.Id == categoryId).ToList();
+            articleDtos = articleDtos.Where(a => a.Category.Id == categoryId && !a.IsDeleted).ToList();
             return articleDtos;
         }
 
@@ -139,6 +140,8 @@ namespace _04.AriBilgi.Blog.Service
                 throw new Exception(ex.Message);
             }
         }
+
+      
 
     }
 }

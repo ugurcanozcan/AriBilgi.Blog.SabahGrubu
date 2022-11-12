@@ -11,5 +11,7 @@ namespace _02.AriBilgi.Blog.Model.ArticleDtos
         public string Title { get; set; }
         public string Content { get; set; }
         public int CategoryId { get; set; }
+        public string FileName { get; set; }
+        public string File { get; set; }
     }
 }

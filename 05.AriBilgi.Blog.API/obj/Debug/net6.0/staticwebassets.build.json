@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "FeKYjO7OPiDZHFmS2dbZuuon09WvwSVcUWLHv7q6La4=",
+  "Hash": "43bmmROgmQ9h+lzmJj5jmBTwR+vBGPoZTAKFXffhp2I=",
   "Source": "05.AriBilgi.Blog.API",
   "BasePath": "_content/05.AriBilgi.Blog.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "05.AriBilgi.Blog.API\\wwwroot",
+      "Source": "05.AriBilgi.Blog.API",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

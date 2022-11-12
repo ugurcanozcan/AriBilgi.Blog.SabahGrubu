@@ -17,4 +17,8 @@
     <ProjectReference Include="..\04.AriBilgi.Blog.Service\04.AriBilgi.Blog.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>

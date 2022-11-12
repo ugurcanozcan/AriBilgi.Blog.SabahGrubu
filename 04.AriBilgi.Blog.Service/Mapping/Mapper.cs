@@ -26,7 +26,16 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         }
         public static Article ToEntity(this AddArticleDto addArticleDto)
         {
-            return new Article { Title = addArticleDto.Title, Content = addArticleDto.Content, CategoryId = addArticleDto.CategoryId, IsDeleted = false, UserId = 1, CreatedDate = DateTime.Now };
+            return new Article
+            {
+                Title = addArticleDto.Title,
+                Content = addArticleDto.Content,
+                CategoryId = addArticleDto.CategoryId,
+                IsDeleted = false,
+                UserId = 1,
+                CreatedDate = DateTime.Now,
+                FileName = addArticleDto.FileName
+            };
         }
         #endregion
 

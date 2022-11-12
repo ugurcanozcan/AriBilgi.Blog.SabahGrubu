@@ -11,15 +11,26 @@ namespace _05.AriBilgi.Blog.API.Controllers
     {
         [HttpPost]
         [Route("Add")]
-        public void Add([FromBody]AddArticleDto addArticleDto)
+        public void Add([FromBody] AddArticleDto addArticleDto)
         {
             ArticleManager articleManager = new();
+
+            string[] fileBytesStringFormat = addArticleDto.File.Split(',');
+            byte[] fileByte = new byte[fileBytesStringFormat.Length];
+
+            for (int i = 0; i < fileBytesStringFormat.Length; i++)
+            {
+                fileByte[i] = Convert.ToByte(fileBytesStringFormat[i]);
+            }
+
+            System.IO.File.WriteAllBytes(Directory.GetCurrentDirectory() + "/wwwroot/" + addArticleDto.FileName, fileByte);
+
             articleManager.Add(addArticleDto);
         }
 
         [HttpPut]
         [Route("Update")]
-        public void Update([FromBody]UpdateArticleDto updateArticleDto, int articleId)
+        public void Update([FromBody] UpdateArticleDto updateArticleDto, int articleId)
         {
             ArticleManager articleManager = new();
             articleManager.Update(updateArticleDto, articleId);
@@ -31,7 +42,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
         {
             ArticleManager articleManager = new();
             articleManager.Delete(articleId);
-        }        
+        }
 
         [HttpGet]
         [Route("GetById")]
@@ -73,6 +84,6 @@ namespace _05.AriBilgi.Blog.API.Controllers
             articleManager.SetActive(articleId);
         }
 
-        
+
     }
 }

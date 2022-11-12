@@ -13,6 +13,7 @@ namespace _025.AriBilgi.Blog.Entities
         public string Content { get; set; }
         public int UserId { get; set; }
         public int CategoryId { get; set; }
+        public string FileName { get; set; }
 
         public User User { get; set; }
         public Category Category { get; set; }

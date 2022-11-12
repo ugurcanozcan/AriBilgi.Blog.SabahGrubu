@@ -26,7 +26,7 @@ namespace _04.AriBilgi.Blog.Service
 
         public ArticleDto Get(int articleId)
         {
-            Article article = _unitOfWork.ArticleRepository.Get(a => a.Id == articleId);
+            Article article = _unitOfWork.ArticleRepository.Get(a => a.Id == articleId && !a.IsDeleted);
 
             ArticleDto articleDto = article.ToDto();
 

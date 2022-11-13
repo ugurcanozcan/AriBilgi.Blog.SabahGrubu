@@ -18,7 +18,14 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         #region ArticleDtos
         public static ArticleDto ToDto(this Article article)
         {
-            return new ArticleDto { Id = article.Id, Title = article.Title, Content = article.Content, IsDeleted = article.IsDeleted };
+            return new ArticleDto
+            {
+                Id = article.Id,
+                Title = article.Title,
+                Content = article.Content,
+                IsDeleted = article.IsDeleted,
+                FileName = article.FileName
+            };
         }
         public static IEnumerable<ArticleDto> ToDto(this IEnumerable<Article> articles)
         {

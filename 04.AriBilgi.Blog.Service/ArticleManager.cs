@@ -52,7 +52,8 @@ namespace _04.AriBilgi.Blog.Service
                                                 State = a.IsDeleted ? "Silindi" : "Aktif",
                                                 CreatedDate = a.CreatedDate,
                                                 Category = c.ToDto(),
-                                                User = u.ToDto()
+                                                User = u.ToDto(),
+                                                FileName=a.FileName
                                             }).ToList();
             return articleDtos;
 

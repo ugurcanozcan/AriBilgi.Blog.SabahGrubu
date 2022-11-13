@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "43bmmROgmQ9h+lzmJj5jmBTwR+vBGPoZTAKFXffhp2I=",
+  "Hash": "NlFLh81bybsyvDxX37UaYP3ouoa//atLuYW+WBhYXFc=",
   "Source": "05.AriBilgi.Blog.API",
   "BasePath": "_content/05.AriBilgi.Blog.API",
   "Mode": "Default",
@@ -15,5 +15,57 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\dijital-pazarlama-icerik-500x500px.jpg",
+      "SourceId": "05.AriBilgi.Blog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "RelativePath": "dijital-pazarlama-icerik-500x500px.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dijital-pazarlama-icerik-500x500px.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\foto (6).jpg",
+      "SourceId": "05.AriBilgi.Blog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "RelativePath": "foto (6).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\foto (6).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\null.jpg",
+      "SourceId": "05.AriBilgi.Blog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "RelativePath": "null.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\null.jpg"
+    }
+  ]
 }

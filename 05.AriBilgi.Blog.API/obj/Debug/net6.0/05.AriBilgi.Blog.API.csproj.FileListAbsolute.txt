@@ -68,3 +68,4 @@ C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\05.AriBilgi.Blog.API\obj\Debug\ne
 C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\05.AriBilgi.Blog.API\obj\Debug\net6.0\05.AriBilgi.Blog.API.genruntimeconfig.cache
 C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\05.AriBilgi.Blog.API\obj\Debug\net6.0\ref\05.AriBilgi.Blog.API.dll
 C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\05.AriBilgi.Blog.API\bin\Debug\net6.0\05.AriBilgi.Blog.API.staticwebassets.runtime.json
+C:\Users\PC\source\repos\Ugurcan\AriBilgi.Blog\05.AriBilgi.Blog.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

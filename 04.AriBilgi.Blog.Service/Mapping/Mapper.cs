@@ -49,7 +49,16 @@ namespace _04.AriBilgi.Blog.Service.Mapping
         #region UserDtos
         public static UserDto ToDto(this User user)
         {
-            return new UserDto { Id = user.Id, Name = user.Name, Surname = user.Surname, Username = user.Username };
+            if (user != null)
+            {
+                return new UserDto { Id = user.Id, Name = user.Name, Surname = user.Surname, Username = user.Username };
+            }
+            else
+            {
+                return null;
+            }
+
+           
         }
         #endregion
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NlFLh81bybsyvDxX37UaYP3ouoa//atLuYW+WBhYXFc=",
+  "Hash": "l8v7/qh071lcDvIHBQOfEH5OzOheFGpt/O+/Mim4+10=",
   "Source": "05.AriBilgi.Blog.API",
   "BasePath": "_content/05.AriBilgi.Blog.API",
   "Mode": "Default",
@@ -17,6 +17,23 @@
   ],
   "Assets": [
     {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\blog.jpg",
+      "SourceId": "05.AriBilgi.Blog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "RelativePath": "blog.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\blog.jpg"
+    },
+    {
       "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\dijital-pazarlama-icerik-500x500px.jpg",
       "SourceId": "05.AriBilgi.Blog.API",
       "SourceType": "Discovered",
@@ -32,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dijital-pazarlama-icerik-500x500px.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\foto (1).jpg",
+      "SourceId": "05.AriBilgi.Blog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "RelativePath": "foto (1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\foto (1).jpg"
     },
     {
       "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\foto (6).jpg",
@@ -66,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\null.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\nullBanner.jpg",
+      "SourceId": "05.AriBilgi.Blog.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\source\\repos\\Ugurcan\\AriBilgi.Blog\\05.AriBilgi.Blog.API\\wwwroot\\",
+      "BasePath": "_content/05.AriBilgi.Blog.API",
+      "RelativePath": "nullBanner.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\nullBanner.jpg"
     }
   ]
 }

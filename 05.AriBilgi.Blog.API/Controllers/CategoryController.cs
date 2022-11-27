@@ -4,15 +4,18 @@ using _02.AriBilgi.Blog.Model.CategoryDtos;
 using _025.AriBilgi.Blog.Entities;
 using _04.AriBilgi.Blog.Service;
 using _04.AriBilgi.Blog.Service.Mapping;
+using _05.AriBilgi.Blog.API.Controllers.Base;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _05.AriBilgi.Blog.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CategoryController : ControllerBase
+
+
+    public class CategoryController : BaseController
     {
+
         [HttpGet]
         [Route("Get")]
         public CategoryDto Get(int categoryId)
@@ -21,7 +24,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
             return categoryManager.Get(categoryId);
         }
 
-
+        
         [HttpGet]
         [Route("GetAll")]
         public List<CategoryDto> GetAll()
@@ -30,6 +33,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
             return categoryManager.GetAll();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("GetAllNonDeleted")]
         public List<CategoryDto> GetAllNonDeleted()

@@ -1,13 +1,15 @@
 ﻿using _02.AriBilgi.Blog.Model.ArticleDtos;
 using _04.AriBilgi.Blog.Service;
+using _05.AriBilgi.Blog.API.Controllers.Base;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _05.AriBilgi.Blog.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ArticleController : ControllerBase
+
+
+    public class ArticleController : BaseController
     {
         [HttpPost]
         [Route("Add")]
@@ -32,6 +34,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
         [Route("Update")]
         public void Update([FromBody] UpdateArticleDto updateArticleDto, int articleId)
         {
+
             ArticleManager articleManager = new();
             articleManager.Update(updateArticleDto, articleId);
         }
@@ -40,10 +43,20 @@ namespace _05.AriBilgi.Blog.API.Controllers
         [Route("Delete")]
         public void Delete(int articleId)
         {
-            ArticleManager articleManager = new();
-            articleManager.Delete(articleId);
+
+            Shared shared = new();
+            string token = HttpContext.Request.Headers["Authorization"];
+
+            if (shared.GetUsername(token) == "ugurcanozcan3")
+            {
+                ArticleManager articleManager = new();
+                articleManager.Delete(articleId);
+            }
+            
+           
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("GetById")]
         public ArticleDto GetById(int id)
@@ -60,6 +73,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
             return articleManager.GetAll();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("GetAllNonDeleted")]
         public List<ArticleDto> GetAllNonDeleted()
@@ -68,6 +82,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
             return articleManager.GetAllNonDeleted();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("GetAllByCategoryId")]
         public List<ArticleDto> GetAllByCategoryId(int categoryId)

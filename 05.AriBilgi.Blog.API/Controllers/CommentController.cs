@@ -1,14 +1,15 @@
 ﻿using _02.AriBilgi.Blog.Model.CommentDtos;
 using _025.AriBilgi.Blog.Entities;
 using _04.AriBilgi.Blog.Service;
+using _05.AriBilgi.Blog.API.Controllers.Base;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _05.AriBilgi.Blog.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CommentController : ControllerBase
+    
+    public class CommentController : BaseController
     {
         [HttpGet]
         [Route("GetListNonDeletedByArticleId")]
@@ -26,6 +27,7 @@ namespace _05.AriBilgi.Blog.API.Controllers
             return commentManager.GetListByArticleId(articleId);
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("Add")]
         public void Add([FromBody]AddCommentDto addCommentDto)
